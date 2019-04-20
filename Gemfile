@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 #------------------------
 gem 'devise'
 gem 'rails-i18n','~>5.1'
+gem 'tty-spinner'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
