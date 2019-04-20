@@ -1,2 +1,21 @@
+<% if user_signed_in? %>
+  <% link_to 'Efetuar logoff...[User]', destroy_user_session_path, method: :delete %>
+<% end %>
+
 <h1>UsersBackoffice::Welcome#index</h1>
 <p>Find me in app/views/users_backoffice/welcome/index.html.erb</p>
+
+<% if user_signed_in? %>
+  <p>Usuário <strong>ESTÁ</strong> logado / <%= current_user.email %> </p>
+<% else %>
+  <p>Usuário <strong>NÃO está</strong> logado</p>
+<% end %>
+
+<% if admin_signed_in? %>
+  <p>Administrador <strong>ESTÁ</strong> logado / <%= current_admin.email %> </p>
+<% else %>
+  <p>Administrador <strong> NÃO está</strong> logado</p>
+<% end %>
+
+
+<p><%= link_to 'LOGOFF [USER]', destroy_user_session_path, method: :delete%></p>
