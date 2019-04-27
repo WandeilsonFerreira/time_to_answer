@@ -17,8 +17,9 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
                                                    )
 
  # /lib/assets
- Rails.application.config.assets.precompile += %w( sb-admin-2.js sb-admin-2.css
+ Rails.application.config.assets.precompile += %w( sb-admin.js sb-admin.css
                                                   custom.js custom.css
                                                   img.jpg)
 
-Rails.application.config.assets.precompile += %w( jquery-2.2.3/dist/jquery )
+Rails.application.config.assets.precompile += %w( jquery-2.2.3/dist/jquery
+                                                  jquery-3.3.1/dist/jquery )
