@@ -224,12 +224,12 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                       <li>
+                          <%= link_to destroy_admin_session_path, method: :delete do %>
+                              <i class="fa fa-sign-out fa-fw"></i>
+                              Sair
+                        <% end %>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -348,7 +348,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Layout admins_backoffice</h1>                   
+                    <h1 class="page-header">Layout admins_backoffice</h1>
                     <%= yield %>
                 </div>
                 <!-- /.col-lg-12 -->
