@@ -47,7 +47,7 @@ end
 
 desc "Adiciona o usuários extras"
 task add_extras_user: :environment do
-  10.times do |j|
+  5.times do |j|
   User.create!(
     email: Faker::Internet.email,
     password: DEFAULT_PASSWORD,

@@ -1,0 +1,32 @@
+
+
+<h2><strong>Usuarios</strong></h2>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+      <thead>
+          <tr>
+              <th>#</th>
+              <th>Email</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.id %></td>
+                <td><%= user.email %></td>
+                <td style="width: 1s00px">
+                  <button type="button" class="btn btn-primary btn-circle">
+                    <i class="fa fa-edit"></i>
+                  </button>
+                  <button type="button" class="btn btn-danger btn-circle">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                </td>
+              </tr>
+            <% end %>
+      </tbody>
+  </table>
+</div>
+
+<p>Find me in app/views/users_backoffice/users/index.html.erb</p>

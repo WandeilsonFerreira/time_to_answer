@@ -20151,3 +20151,2495 @@ Migrating to DeviseCreateUsers (20190420050728)
   ↳ lib/tasks/dev.rake:51
   [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-04-27 14:17:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JefLV2V/SQB9CxDizKqPT3jOJNWrp6YnjS6qP/sla4Ag9aidtE6LnvfySL+30bUwpTSE2YXC5vfN0joJTRF93g=="}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 93ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 14:17:36 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  Rendered site/welcome/index.html.erb within layouts/site (4.9ms)
+Completed 200 OK in 419ms (Views: 418.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:17:38 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-04-27 14:17:38 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (1.2ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:17:43 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-27 14:17:43 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-27 14:17:47 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JLtBNQGppkuNr+XH0Ew0zMSAx/JHBCZWTZKW3gunclQhqSL/0Jhk1QdWvZqrNw6zGXpn/mlhZoYNbgbovZNkCg==", "user"=>{"email"=>"user@user.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users_backoffice/welcome/index
+Completed 302 Found in 181ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:17:48 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.1ms)
+Completed 200 OK in 96ms (Views: 93.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:19:23 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.8ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:20:03 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.8ms)
+Completed 500 Internal Server Error in 358ms (ActiveRecord: 0.2ms)
+
+
+
+NameError - undefined local variable or method `curent' for #<#<Class:0x00007fc405cdc730>:0x00007fc405cca1e8>:
+  app/views/layouts/users_backoffice.html.erb:36:in `_app_views_layouts_users_backoffice_html_erb__708228574193958393_70240073456820'
+
+Started POST "/__better_errors/ee5d9f1145b62dbe/variables" for 127.0.0.1 at 2019-04-27 14:20:04 -0300
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:20:35 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 500 Internal Server Error in 477ms (ActiveRecord: 0.1ms)
+
+
+
+NameError - undefined local variable or method `curent_user' for #<#<Class:0x00007fc405cdc730>:0x000056393086da20>
+Did you mean?  current_user:
+  app/views/layouts/users_backoffice.html.erb:36:in `_app_views_layouts_users_backoffice_html_erb__708228574193958393_47401813850040'
+
+Started POST "/__better_errors/3bbd1c72deb2a034/variables" for 127.0.0.1 at 2019-04-27 14:20:36 -0300
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:20:43 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-04-27 14:21:26 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HGFRFk9ToNRkL97vBN5aPcYE/yJz2uzqo9r2cCXTGCaZwqRdwz81efct7fib6VTy/b7Ra1efEgMeziKoNesBbg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 14:21:27 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  Rendered site/welcome/index.html.erb within layouts/site (4.4ms)
+Completed 200 OK in 439ms (Views: 438.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:21:29 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-27 14:21:29 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-27 14:21:34 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jRPNyLCzxpuumgsSmescixcULLBdbkPnj3IJmfmYE0AIsDiDPN9TNj2YOAUG3BJELK4C+XkrvQ4yZt1B6aAKCA==", "user"=>{"email"=>"charmainshanahan@yundt.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "charmainshanahan@yundt.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users_backoffice/welcome/index
+Completed 302 Found in 173ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:21:35 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 200 OK in 89ms (Views: 87.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 14:25:49 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:4
+  Rendered site/welcome/index.html.erb within layouts/site (2.0ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/startbootstrap-sb-admin-v2/index.html" for 127.0.0.1 at 2019-04-27 14:26:02 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/startbootstrap-sb-admin-v2/index.html"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/templates/startbootstrap-sb-admin-v2/js/jquery.min.map" for 127.0.0.1 at 2019-04-27 14:26:51 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/templates/startbootstrap-sb-admin-v2/js/jquery.min.map"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users_backoffice/welcogfdeukx" for 127.0.0.1 at 2019-04-27 14:51:02 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users_backoffice/welcogfdeukx"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-04-27 14:52:58 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:4
+  Rendered site/welcome/index.html.erb within layouts/site (13.7ms)
+Completed 200 OK in 764ms (Views: 761.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:53:07 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-04-27 14:53:07 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (1.0ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-04-27 14:53:09 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JAjgs32drn/GDqsm0UXxGvS6LuESp49Trz3wUeTDqbkul2Y9akXTr0YHfHLrqrC0JAzkoKdTo4Ex65vo4oonMA==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Update (0.4ms)[0m  [1m[33mUPDATE "admins" SET "remember_created_at" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["remember_created_at", "2019-04-27 17:53:10.077283"], ["updated_at", "2019-04-27 17:53:10.078097"], ["id", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (62.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins_backoffice/welcome/index
+Completed 302 Found in 244ms (ActiveRecord: 63.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:53:10 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (2.7ms)
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 0.5ms)
+
+
+
+NoMethodError - undefined method `lint_to' for #<#<Class:0x00007f56454045f0>:0x00007f5645416b10>
+Did you mean?  link_to:
+  app/views/layouts/admins_backoffice.html.erb:256:in `_app_views_layouts_admins_backoffice_html_erb__3045710757065706197_70004252910420'
+
+Started POST "/__better_errors/e0779fdf7973624a/variables" for 127.0.0.1 at 2019-04-27 14:53:10 -0300
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:53:32 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (2.2ms)
+Completed 200 OK in 94ms (Views: 92.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:53:48 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (2.6ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:53:50 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (2.2ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:54:01 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (8.6ms)
+Completed 200 OK in 75ms (Views: 71.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 14:54:03 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.4ms)
+Completed 200 OK in 92ms (Views: 86.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:54:07 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (2.6ms)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 14:54:09 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.3ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:54:10 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.7ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 14:54:11 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.3ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:54:11 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.7ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 14:54:20 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.4ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:54:21 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.9ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 14:54:21 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.3ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 14:54:23 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.4ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 14:54:24 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (2.0ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 14:54:25 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.4ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:12:51 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.8ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:12:52 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.4ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:12:53 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.7ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:12:54 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.3ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:15:54 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.3ms)
+Completed 200 OK in 86ms (Views: 75.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:22:30 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (0.4ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:24:20 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:15
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.3ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:28:48 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:15
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.6ms)
+Completed 200 OK in 62ms (Views: 59.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:29:11 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (2.3ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:31:56 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.4ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:32:00 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (8.3ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:32:02 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.1ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:32:03 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.7ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:32:05 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.6ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:32:54 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.9ms)
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:33:07 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (2.1ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:33:33 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.4ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 20:33:55 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.5ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-04-27 20:37:51 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FDz4dUq5cdXJo3gbhxYTw1wBF7pMZYfYA2QIwe4sMisi1yI4zh2vM7C4eEGI49w1mQQrJvEg7ds+s74KJkR2RQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Update (0.4ms)[0m  [1m[33mUPDATE "admins" SET "remember_created_at" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2019-04-27 23:37:51.745658"], ["id", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (100.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 222ms (ActiveRecord: 102.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 20:37:51 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:4
+  Rendered site/welcome/index.html.erb within layouts/site (8.4ms)
+Completed 200 OK in 433ms (Views: 432.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:37:53 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 200 OK in 188ms (Views: 185.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:39:27 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.0ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index.html" for 127.0.0.1 at 2019-04-27 20:39:32 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/welcome/index2.html" for 127.0.0.1 at 2019-04-27 20:39:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users_backoffice/welcome/index2.html"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users_backoffice/welcome/index3.html" for 127.0.0.1 at 2019-04-27 20:39:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users_backoffice/welcome/index3.html"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:40:41 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-04-27 20:40:41 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (1.2ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-04-27 20:40:43 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+VxTS3BLRK2vZJNAj1um8+FMdc0wr6A4VsMGJAzUXXzPt4kG9O+aS9Z/kxqArmkFJElJUY3qyjtrFLDvxLwZEg==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins_backoffice/welcome/index
+Completed 302 Found in 169ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:40:43 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.8ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/welcfdsome/index" for 127.0.0.1 at 2019-04-27 20:41:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admins_backoffice/welcfdsome/index"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:42:36 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (2.4ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:42:40 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (2.0ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:42:41 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (4.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/users_backoffice/users/index.html.erb:14:in `_app_views_users_backoffice_users_index_html_erb___3627808340899943618_70063943777060'
+
+Started POST "/__better_errors/c905e27a84b10b26/variables" for 127.0.0.1 at 2019-04-27 20:42:41 -0300
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:42:48 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.8ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:45:18 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (12.9ms)
+Completed 200 OK in 112ms (Views: 98.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:45:20 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.4ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:45:42 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (2.8ms)
+Completed 200 OK in 102ms (Views: 98.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:46:15 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.5ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:48:29 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.9ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:48:59 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.2ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:49:36 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.3ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:49:48 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (2.0ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:50:15 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.7ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:50:17 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.7ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:50:48 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.5ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:51:20 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.7ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:51:35 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.5ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:52:33 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.5ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:52:59 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.8ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:53:04 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (2.2ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:53:08 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.2ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:53:26 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (2.2ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:53:29 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.9ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:53:36 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (2.0ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:54:04 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.8ms)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:54:17 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.2ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:55:05 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.2ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:55:16 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.1ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:55:32 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.2ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:56:17 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.2ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (168.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (85.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateAdmins (20190420050706)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190420050706_devise_create_admins.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  ↳ db/migrate/20190420050706_devise_create_admins.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  ↳ db/migrate/20190420050706_devise_create_admins.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190420050706"]]
+  ↳ bin/rails:9
+  [1m[35m (71.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20190420050728)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190420050728_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190420050728_devise_create_users.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20190420050728_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190420050728"]]
+  ↳ bin/rails:9
+  [1m[35m (90.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-27 23:57:26.978476"], ["updated_at", "2019-04-27 23:57:26.978476"]]
+  ↳ bin/rails:9
+  [1m[35m (59.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:21
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:21
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$bANgUBbmmyUT2n.sFkSVbOYlkAAGfwGkpV9g/tGwNXRf5C6OgHxly"], ["created_at", "2019-04-27 23:57:28.708407"], ["updated_at", "2019-04-27 23:57:28.708407"]]
+  ↳ lib/tasks/dev.rake:21
+  [1m[35m (124.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "scottyjast@dickinsonreynolds.biz"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (1.0ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "scottyjast@dickinsonreynolds.biz"], ["encrypted_password", "$2a$11$ORwCKdmUKfMgonS7LSXC8.WldzD2tRJJBJ3hQjinm9YBI6Dtp2WI6"], ["created_at", "2019-04-27 23:57:30.652584"], ["updated_at", "2019-04-27 23:57:30.652584"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (94.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "adalbertomurazik@hettinger.org"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "adalbertomurazik@hettinger.org"], ["encrypted_password", "$2a$11$guAKc031kZhZ5VncZ6pKTOtWVgpIpUPPLM4dO12xGxSMjYwCA7rUi"], ["created_at", "2019-04-27 23:57:30.913303"], ["updated_at", "2019-04-27 23:57:30.913303"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (55.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "jacqulyn@keeling.org"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jacqulyn@keeling.org"], ["encrypted_password", "$2a$11$kmz7LULDBSW/7Q.OnYZxj.QkRTophF9oAmrukQWFyE2qzzrCPPghO"], ["created_at", "2019-04-27 23:57:31.137577"], ["updated_at", "2019-04-27 23:57:31.137577"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (64.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "jose@veum.biz"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jose@veum.biz"], ["encrypted_password", "$2a$11$TjU1Nk3xVq4SiIYQ3bSmt.sCg/L8ViZnARQi6uUM6.j9W6DqYNt.S"], ["created_at", "2019-04-27 23:57:31.370475"], ["updated_at", "2019-04-27 23:57:31.370475"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (63.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "arturo@linddubuque.io"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "arturo@linddubuque.io"], ["encrypted_password", "$2a$11$mg590aoQEhYhVdaBFm9ig.76vn.LCQcbFrQIKULTDacPWSBw/uKHK"], ["created_at", "2019-04-27 23:57:31.596048"], ["updated_at", "2019-04-27 23:57:31.596048"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (59.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "daron@lueilwitz.biz"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "daron@lueilwitz.biz"], ["encrypted_password", "$2a$11$80g6/Skyfs/mGUXqsgtbwOULal9UULZ1Ad.VnSSkipzFPQdjMKNVS"], ["created_at", "2019-04-27 23:57:31.828095"], ["updated_at", "2019-04-27 23:57:31.828095"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (48.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "denis@hyatt.info"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "denis@hyatt.info"], ["encrypted_password", "$2a$11$pqeCkxujvUP7T7/di4ptpOuJtDQBWlNIXbBHSaA6YfckL1iR4oIKK"], ["created_at", "2019-04-27 23:57:32.047479"], ["updated_at", "2019-04-27 23:57:32.047479"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (51.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "carylonmetz@kautzer.net"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "carylonmetz@kautzer.net"], ["encrypted_password", "$2a$11$R9ZV5eQ0lhrmYP/sbtC6.O8oCUg7g9DNHAps2KW8QDP1H5XXgZVZW"], ["created_at", "2019-04-27 23:57:32.268193"], ["updated_at", "2019-04-27 23:57:32.268193"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (51.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "lachelle@gislason.info"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "lachelle@gislason.info"], ["encrypted_password", "$2a$11$E5g7ymM8igXWMGFGp.6FA.LnrV8AoOOsYam44DLcMz1iYp64j3dDe"], ["created_at", "2019-04-27 23:57:32.489737"], ["updated_at", "2019-04-27 23:57:32.489737"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (74.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "lesliepadberg@pollich.net"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "lesliepadberg@pollich.net"], ["encrypted_password", "$2a$11$C9SK9H.LrPQPmXrZqMizj.vGXdddgLFkC1QEDwmJEed6CuRNkOF0C"], ["created_at", "2019-04-27 23:57:32.730761"], ["updated_at", "2019-04-27 23:57:32.730761"]]
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (53.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:41
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:41
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "user@user.com"], ["encrypted_password", "$2a$11$UjbKTHaEJio7t9PPKNGOwOwZ6EyW9EkIgNK.5cbTLsR10lFMTn96C"], ["created_at", "2019-04-27 23:57:34.439365"], ["updated_at", "2019-04-27 23:57:34.439365"]]
+  ↳ lib/tasks/dev.rake:41
+  [1m[35m (87.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:41
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rasheeda@wilkinsonmayert.biz"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rasheeda@wilkinsonmayert.biz"], ["encrypted_password", "$2a$11$NF/yPgUYwu5jjm1r3tjz1e6H.n1.ynFa3z9EsXJhFh4.Un9wWRnae"], ["created_at", "2019-04-27 23:57:36.359264"], ["updated_at", "2019-04-27 23:57:36.359264"]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[35m (105.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ignacio@frami.org"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "ignacio@frami.org"], ["encrypted_password", "$2a$11$roZqBQDn8Ui0djH7JMefJeIYRo9e53ktHkBt32AfKC/d5gzPChcma"], ["created_at", "2019-04-27 23:57:36.627199"], ["updated_at", "2019-04-27 23:57:36.627199"]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[35m (68.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "terrielittel@price.biz"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "terrielittel@price.biz"], ["encrypted_password", "$2a$11$WDd0whjOVgXh044T.1Ca5OhqgokWrEwV8G7adqsVXlSiRRb3KQ7kK"], ["created_at", "2019-04-27 23:57:36.860077"], ["updated_at", "2019-04-27 23:57:36.860077"]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[35m (69.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kent@hills.net"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "kent@hills.net"], ["encrypted_password", "$2a$11$Sa3P31u14B./kcGm8RZo9u.MLCDBQsagw5OtWnhUD7TmkO.LNvXdK"], ["created_at", "2019-04-27 23:57:37.091570"], ["updated_at", "2019-04-27 23:57:37.091570"]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[35m (70.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "carlos@koelpinblock.co"], ["LIMIT", 1]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "carlos@koelpinblock.co"], ["encrypted_password", "$2a$11$GOdpI.eMDOUxwH8sT6fUcebms.Gqv4OL9jVEF8wBL4hYGOPTQdpJ6"], ["created_at", "2019-04-27 23:57:37.331635"], ["updated_at", "2019-04-27 23:57:37.331635"]]
+  ↳ lib/tasks/dev.rake:51
+  [1m[35m (73.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ lib/tasks/dev.rake:51
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:58:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-27 20:58:02 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 796ms (Views: 789.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-27 20:58:06 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ie9uxSzuiyR2f+pyHNmq9Er08Fsm/83RDECaNpq8sQ+xUUfPWyjuZbNho6+DvVhGjCUHWtTl5RXIjZFIp+eVgw==", "user"=>{"email"=>"user@user.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users_backoffice/users/index
+Completed 302 Found in 181ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:58:06 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.7ms)
+Completed 200 OK in 105ms (Views: 102.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:58:09 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (13.7ms)
+Completed 200 OK in 94ms (Views: 90.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:58:11 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.0ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 20:58:13 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.2ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 20:58:15 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.8ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:00:11 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.9ms)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:00:24 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.0ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:00:37 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:01:01 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.6ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:01:04 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:02:44 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.0ms)
+Completed 200 OK in 69ms (Views: 66.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:03:08 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.9ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:03:22 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backofficef/welcome/index" for 127.0.0.1 at 2019-04-27 21:03:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users_backofficef/welcome/index"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:04:17 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/users_backoffice/users" for 127.0.0.1 at 2019-04-27 21:04:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users_backoffice/welcome/users_backoffice/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users_backoffice/welcome/users_backoffice/users" for 127.0.0.1 at 2019-04-27 21:04:41 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users_backoffice/welcome/users_backoffice/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:04:42 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.8ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:04:43 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.2ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:04:44 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.6ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:04:45 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.0ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:04:47 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.1ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/infdfdex" for 127.0.0.1 at 2019-04-27 21:04:51 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users_backoffice/users/infdfdex"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:05:10 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.0ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:05:10 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.3ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:05:12 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.7ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:05:13 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.1ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:05:15 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.1ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:05:16 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.0ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:05:18 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.9ms)
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:05:53 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.0ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:06:15 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.8ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_hgckoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:06:24 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users_hgckoffice/welcome/index"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=ind" for 127.0.0.1 at 2019-04-27 21:06:47 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"ind"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=index" for 127.0.0.1 at 2019-04-27 21:06:48 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"index"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:07:06 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (0.8ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/site/welcome/index" for 127.0.0.1 at 2019-04-27 21:07:10 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:4
+  Rendered site/welcome/index.html.erb within layouts/site (2.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:07:13 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-04-27 21:07:13 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-04-27 21:07:15 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/OkVGpb9f2Z8KsbgJEXWquvl803EvYkzWpoNLxSQd+rQd5vnHOLtWYM2/cYj1nY0+nbqlj3FfogKZr03aQiFA==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins_backoffice/welcome/index
+Completed 302 Found in 168ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:07:16 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (2.7ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 21:07:19 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.8ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:07:30 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.6ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 21:07:33 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (2.0ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index.html" for 127.0.0.1 at 2019-04-27 21:07:34 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.4ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/admins/index.html" for 127.0.0.1 at 2019-04-27 21:08:12 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.8ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index.html" for 127.0.0.1 at 2019-04-27 21:08:42 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.2ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index.html" for 127.0.0.1 at 2019-04-27 21:08:52 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.5ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/site/welcome/index" for 127.0.0.1 at 2019-04-27 21:08:53 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:4
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:10
+  Rendered site/welcome/index.html.erb within layouts/site (3.0ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:08:55 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (2.1ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:08:57 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admins_backoffice/welcome/index.html.erb:6
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (2.2ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 21:08:59 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.4ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/admins/index" for 127.0.0.1 at 2019-04-27 21:11:39 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.6ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/welcome/index" for 127.0.0.1 at 2019-04-27 21:11:44 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:4
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:10
+  Rendered site/welcome/index.html.erb within layouts/site (2.5ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:11:45 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users_backoffice/welcome/index.html.erb:14
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.6ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:11:47 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.6ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-04-27 21:12:01 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kPqxUhsMq/GMeyst0tV5Vnr2sbLOpFuWMBkttDmNPez9Tw9NopjrRUjvqHjLm1ITvTEd4uZZnckgg4RssImXOQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 21:12:01 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:10
+  Rendered site/welcome/index.html.erb within layouts/site (2.2ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:12:03 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.1ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-04-27 21:12:05 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p8DnjtN2fmn72ik612/5hqXD3uqmbqtfQh8yDDPbzs7KdVmRauI+3T9Oqm/OIdLDYgRyuo6TbQBShZvUut9kGw=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 21:12:05 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  Rendered site/welcome/index.html.erb within layouts/site (1.6ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:12:11 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-04-27 21:12:11 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-04-27 21:12:13 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"akRIYIwfi5IzlPJgpbtHbOt6XCbF6uMpTLoTeTAkrTkH8fZ/NYvLJvcAcTW89WwpLL3wdu0XJXZcILqhuSAH7A==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins_backoffice/welcome/index
+Completed 302 Found in 167ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:12:14 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.0ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:12:18 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (0.9ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:13:31 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.4ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-04-27 21:13:33 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2hj3tEEL4jDaVGU6sGCkqU6kscgLqkUD5061C+G0UyBz83gIbTdAh4Veec9TpVPXsoqZf1rlQjceXYHqlZLY2Q=="}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 21:13:33 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  Rendered site/welcome/index.html.erb within layouts/site (1.3ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:13:36 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-04-27 21:13:36 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-04-27 21:13:37 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HlNR2b13RUTUXm1cs8K58EcA/0jQlVAzV3aQHc6PlHS3uN5lkUvn84tUcalQB06Ouy7X/4HaVweuZaT8uqkfjQ==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins_backoffice/welcome/index
+Completed 302 Found in 176ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:13:38 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.0ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-04-27 21:13:42 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2aSBFqcySLsg/C/dRKN951HeHxW8m4xe2Icdy67lPGG47ym96DJq6GHJD3A+POvYxwSQfNcBNhqd2unOa43XpA=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 21:13:42 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  Rendered site/welcome/index.html.erb within layouts/site (1.6ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 21:29:25 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  Rendered site/welcome/index.html.erb within layouts/site (1.1ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:29:26 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-04-27 21:29:26 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (0.7ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-04-27 21:29:29 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9diKfQM/LpUdaSfUSJlBXFKAXWP7LSuq0nUualoU4JmUkyLWTD8MxlxcB3kyBtdjxFrSCpC3ke6XKNpvn3wLXA==", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins_backoffice/welcome/index
+Completed 302 Found in 179ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:29:29 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.1ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:29:31 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (0.9ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/admins" for 127.0.0.1 at 2019-04-27 21:29:32 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.4ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/welcome/index" for 127.0.0.1 at 2019-04-27 21:29:36 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/site/welcome/index.html.erb:10
+  Rendered site/welcome/index.html.erb within layouts/site (2.3ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:34:56 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (0.9ms)
+Completed 200 OK in 46ms (Views: 36.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admins_backoffice/admins" for 127.0.0.1 at 2019-04-27 21:34:57 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.6ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:34:58 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (0.9ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/admins" for 127.0.0.1 at 2019-04-27 21:34:58 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.2ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:34:59 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.2ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admins_backoffice/admins" for 127.0.0.1 at 2019-04-27 21:34:59 -0300
+Processing by AdminsBackoffice::AdminsController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/admins/index.html.erb within layouts/admins_backoffice
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/views/admins_backoffice/admins/index.html.erb:12
+  Rendered admins_backoffice/admins/index.html.erb within layouts/admins_backoffice (1.5ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admins_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:35:00 -0300
+Processing by AdminsBackoffice::WelcomeController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice
+  Rendered admins_backoffice/welcome/index.html.erb within layouts/admins_backoffice (1.2ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-04-27 21:35:02 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bPSRq2reKttOjqtL1yW4VAyz5J5F93swh5kMeipUwk99O3ahq6Q7aizdOq7f4m1Sc8ryIwVVoABRfLo74yqzXg=="}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 21:35:02 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  Rendered site/welcome/index.html.erb within layouts/site (1.5ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:35:03 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-27 21:35:03 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 23ms (Views: 14.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-27 21:35:05 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"shEwc338t/z5Ih8bVvLHhu6ayb3d1r30K6oM7fymfmaj3td5vIamTZtxjv5eNRKAkePfAJ10ZsT9T7qsNdgPdw==", "user"=>{"email"=>"user@user.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users_backoffice/welcome/index
+Completed 302 Found in 174ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:35:05 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.2ms)
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-04-27 21:35:07 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z+kl9enNNquMsQWs9o45f7TidB28tk2prCLwKLyGjnEY0ZV8NuURGgcp8bCYjdKPZNUINs6qdK86xWO4y178nw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-27 21:35:07 -0300
+Processing by Site::WelcomeController#index as HTML
+  Rendering site/welcome/index.html.erb within layouts/site
+  Rendered site/welcome/index.html.erb within layouts/site (1.3ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:35:09 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-27 21:35:09 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-27 21:35:11 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+kAYrHO9Go164VGaIDJn5ZT96bpLYzT1mQDDkWei3wcteKglrJU9PPF5pYZOMYwVRMqVkTl/DfMP51ABEHqt6Q==", "user"=>{"email"=>"user@user.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "user@user.com"], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users_backoffice/welcome/index
+Completed 302 Found in 169ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users_backoffice/welcome/index" for 127.0.0.1 at 2019-04-27 21:35:12 -0300
+Processing by UsersBackoffice::WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/welcome/index.html.erb within layouts/users_backoffice
+  Rendered users_backoffice/welcome/index.html.erb within layouts/users_backoffice (1.1ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users_backoffice/users/index" for 127.0.0.1 at 2019-04-27 21:35:13 -0300
+Processing by UsersBackoffice::UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /root/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users_backoffice/users/index.html.erb within layouts/users_backoffice
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users_backoffice/users/index.html.erb:14
+  Rendered users_backoffice/users/index.html.erb within layouts/users_backoffice (1.6ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.3ms)
+
+
