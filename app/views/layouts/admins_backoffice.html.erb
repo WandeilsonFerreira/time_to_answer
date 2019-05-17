@@ -82,6 +82,12 @@
                           <% end %>
                         </li>
 
+                        <li>
+                          <%= link_to "#" do %>
+                                <i class="fa fa-file-text-o fa-fw"></i> Assuntos/Áreas
+                          <% end %>
+                        </li>
+
                             </ul>
 
 
@@ -110,7 +116,16 @@
    <%= javascript_include_tag 'application'%>
    <%= javascript_include_tag 'admins_backoffice'%>
 
-
+   <% if notice %>
+      <%= javascript_tag do %>
+           $.bootstrapGrowl('<%= notice %>', {
+           type: 'success',
+           align: 'right',
+           allow_dismiss: true,
+           stackup_spacing: 10
+           });
+    <% end %>
+   <% end %>
 </body>
 
 </html>

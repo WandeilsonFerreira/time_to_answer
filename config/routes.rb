@@ -1,18 +1,20 @@
 Rails.application.routes.draw do
   namespace :admins_backoffice do
+    get 'admins/index'
     get 'welcome/index'
-    resources :admins, only: [:index,  :edit, :update]
+    resources :admins   #Administrador
+    resources :subjects #Assuntos/Áreas
   end
+
   namespace :users_backoffice do
     get 'users/index'
     resources :users, only: [:index]
   end
-  namespace :admins_backoffice do
-    get 'admins/index'
-  end
-  namespace :site do
+
+ namespace :site do
     get 'welcome/index'
   end
+
   devise_for :users
   devise_for :admins
   get 'site/welcome/index'

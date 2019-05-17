@@ -1,6 +1,7 @@
 namespace :dev do
 
 DEFAULT_PASSWORD = 123456
+DEFAULT_FILES_PATH = File.join(Rails.root, 'lib', 'tmp')
 desc "Configura o ambiente de desenvolvimento"
 task setup: :environment do
   if Rails.env.development?
@@ -11,6 +12,7 @@ task setup: :environment do
     show_spinner("Cadastrando Administrador extras...") {  %x(rails dev:add_extras_admin)}
     show_spinner("Cadastrando Usuario padrão...") { %x(rails dev:add_default_user)}
     show_spinner("Cadastrando Usuarios extras...") { %x(rails dev:add_extras_user)}
+    show_spinner("Cadastrando assuntos padrões...") { %x(rails dev:add_subjects) }
   else
     puts "Você não está em ambiente de desenvolvimento!"
   end
@@ -27,7 +29,7 @@ end
 
 desc "Adiciona administradores extras"
 task add_extras_admin: :environment do
-  10.times do |i|
+  25.times do |i|
   Admin.create!(
     email: Faker::Internet.email,
     password: DEFAULT_PASSWORD,
@@ -47,12 +49,21 @@ end
 
 desc "Adiciona o usuários extras"
 task add_extras_user: :environment do
-  5.times do |j|
+  10.times do |j|
   User.create!(
     email: Faker::Internet.email,
     password: DEFAULT_PASSWORD,
     password_confirmation: DEFAULT_PASSWORD
 )
+  end
+end
+
+desc "Adiciona assuntos padrão"
+task add_subjects: :environment do
+  file_name = 'subjects.txt'
+  file_path = File.join(DEFAULT_FILES_PATH, file_name)
+
+  File.open(file_path, 'r').each do |line| Subject.create!(description: line.strip)
   end
 end
 
